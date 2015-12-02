@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Chrome DevTools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+          <style>
+            ul.horizontal-tabs {
+              list-style: none;
+              background-color: #F3F3F3;
+              padding: 0 5px;
+              margin-bottom: 75px;
+            }
+            .horizontal-tabs li {
+              color: #5A5A5A;
+              font-size: 0.7em;
+              float: left;
+              padding: 10px;
+            }
+            .horizontal-tabs li.selected {
+              box-shadow: inset 2px 0px 25px -2px #1A1A1A;
+              border-left: 1px solid #999;
+              border-right: 1px solid #999;
+              border-top: 1px solid #5A5A5A;
+              border-bottom: 1px solid #5A5A5A;
+            }
+            li.no-list-style {
+              margin-top: 50px !important;
+              list-style: none;
+            }
+            .ident1 {
+              color: #4892F6 !important;
+            }
+            .ident2 {
+              color: #ED4C3D !important;
+            }
+            .ident3 {
+              color: #FAC304 !important;
+            }
+            .ident4 {
+              color: #3BB15D !important;
+            }
+            img.watermark {
+               position: absolute;
+               bottom: 25px;
+               left: 25px;
+            }
+          </style>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <style>
+      .reveal section img.nostyle {
+        background: none;
+        border: none;
+        box-shadow: none;
+        margin: 0;
+      }
+      .reveal section img.roundup {
+        border: 2px solid #fff;
+        height: 40px;
+        width: 40px;
+        border-radius: 23px;
+        display: block;
+        margin: -15px auto 0;
+      }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <img class="watermark" src="images/earthling_logo.png" alt="earthling"/>
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>NodeSchool Madison <img class="nostyle" alt="chrome devtools" src="images/logo.png" /></h1>
+          <p>
+            <small>
+              Josh Thomas / <a href="http://twitter.com/jthoms1">@jthoms1</a>
+              <img style="display: inline-block; width: 40px; margin-top: -4px; margin-left: 5px"
+                class="nostyle"
+                alt="jthoms1"
+                src="images/twitter-logo.png"
+              />
+            </small>
+            <img class="roundup" src="images/jthoms1-logo.png" alt="archer" />
+          </p>
+        </section>
+
+        <section>
+          <h2>When you don't know your tool what do you have?</h2>
+          <ul>
+            <li class="fragment fade-in">Panels and Problems<br/><br/></li>
+            <li class="fragment fade-in">Insights and Answers</li>
+          </ul>
+        </section>
+
+        <section data-transition="zoom">
+          <h3 class="ident1">Elements</h3>
+          <ul class="horizontal-tabs">
+            <li class="selected">Elements</li>
+            <li>Network</li>
+            <li>Sources</li>
+            <li>Timeline</li>
+            <li>Profiles</li>
+            <li>Resources</li>
+            <li>Audits</li>
+            <li>Console</li>
+          </ul>
+          <ul>
+            <li class="fragment fade-in"><span class="ident1">Overview: </span>Inspect/Edit the HTML and CSS of your site.</li>
+            <li class="fragment fade-in"><span class="ident1">Answers: </span>What css is screwing up my layout!?</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="ident1">Elements</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li class="fragment fade-in no-list-style"><span class="ident1">Tips:</span>
+              <ul>
+                <li>Expand all children: <i>alt + click</i></li>
+                <li>Find by selector: <i>cmd + f</i></li>
+                <li>Computed Style: Identify the winning line</li>
+                <li>Apply pseudo selector to element</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section data-transition="zoom">
+          <h3 class="ident2">Network</h3>
+          <ul class="horizontal-tabs">
+            <li>Elements</li>
+            <li class="selected">Network</li>
+            <li>Sources</li>
+            <li>Timeline</li>
+            <li>Profiles</li>
+            <li>Resources</li>
+            <li>Audits</li>
+            <li>Console</li>
+          </ul>
+          <ul>
+            <li class="fragment fade-in"><span class="ident2">Overview: </span>Identify network issues and test your site's network performance.</li>
+            <li class="fragment fade-in"><span class="ident2">Answers: </span>Why is my ajax data not loading!?</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="ident2">Network</h3>
+          <ul>
+            <li>Identify resources downloaded</li>
+            <li>Get a general timeline and speed of the application</li>
+            <li>Troubleshoot web service errors</li>
+            <li class="fragment fade-in no-list-style"><span class="ident2">Tips:</span>
+              <ul>
+                <li>Throttling to simulate slower networks</li>
+                <li>Capture frames of the site during download.</li>
+                <li>Copy image as base 64 Data URI</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section data-transition="zoom">
+          <h3 class="ident3">Sources</h3>
+          <ul class="horizontal-tabs">
+            <li>Elements</li>
+            <li>Network</li>
+            <li class="selected">Sources</li>
+            <li>Timeline</li>
+            <li>Profiles</li>
+            <li>Resources</li>
+            <li>Audits</li>
+            <li>Console</li>
+          </ul>
+          <ul>
+            <li class="fragment fade-in"><span class="ident3">Overview: </span>Debug your JavaScript effectively.</li>
+            <li class="fragment fade-in"><span class="ident3">Answers: </span>What is my variable's value at this line!?</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="ident3">Sources</h3>
+          <ul>
+            <li>Breakpoints are your best friend</li>
+            <li>Stepping your code</li>
+            <li class="fragment fade-in no-list-style"><span class="ident3">Tips:</span>
+              <ul>
+                <li>Prettyify jQuery minified source</li>
+                <li>Pause on Exceptions</li>
+                <li>Find source by name: <i>cmd + o</i></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section data-transition="zoom">
+          <h3 class="ident4">Timeline</h3>
+          <ul class="horizontal-tabs">
+            <li>Elements</li>
+            <li>Network</li>
+            <li>Sources</li>
+            <li class="selected">Timeline</li>
+            <li>Profiles</li>
+            <li>Resources</li>
+            <li>Audits</li>
+            <li>Console</li>
+          </ul>
+          <ul>
+            <li class="fragment fade-in"><span class="ident4">Overview: </span>Gain an overview of your application timeline.</li>
+            <li class="fragment fade-in"><span class="ident4">Answers: </span>Why is my app taking so long to load!?</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="ident4">Timeline</h3>
+          <ul>
+            <li>Get a general timeline and speed of the application</li>
+            <li>Flame chart</li>
+          </ul>
+        </section>
+
+        <section data-transition="zoom">
+          <h3 class="ident1">Profiles</h3>
+          <ul class="horizontal-tabs">
+            <li>Elements</li>
+            <li>Network</li>
+            <li>Sources</li>
+            <li>Timeline</li>
+            <li class="selected">Profiles</li>
+            <li>Resources</li>
+            <li>Audits</li>
+            <li>Console</li>
+          </ul>
+          <ul>
+            <li class="fragment fade-in"><span class="ident1">Overview: </span>Profile your application CPU and memory use.</li>
+            <li class="fragment fade-in"><span class="ident1">Answers: </span>Where is my memory leak coming from!?</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="ident1">Profiles</h3>
+          <ul>
+            <li>Record interactions and gain insight</li>
+            <li>Profile CPU</li>
+            <li>Identify Memory Allocation</li>
+            <li>Monitory memory allocation over time</li>
+          </ul>
+        </section>
+
+        <section data-transition="zoom">
+          <h3 class="ident2">Resources</h3>
+          <ul class="horizontal-tabs">
+            <li>Elements</li>
+            <li>Network</li>
+            <li>Sources</li>
+            <li>Timeline</li>
+            <li>Profiles</li>
+            <li class="selected">Resources</li>
+            <li>Audits</li>
+            <li>Console</li>
+          </ul>
+          <ul>
+            <li class="fragment fade-in"><span class="ident2">Overview: </span>Inspect your application's peristent storage.</li>
+            <li class="fragment fade-in"><span class="ident2">Answers: </span>How/Why I am still logged in!?</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="ident2">Resources</h3>
+          <ul>
+            <li>Identify specific resources outside of network tab</li>
+            <li>View persistent storage mechanisms: ie cookies, local storage</li>
+            <li class="fragment fade-in no-list-style"><span class="ident2">Tips:</span>
+              <ul>
+                <li>Clear cookies</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section data-transition="zoom">
+          <h3 class="ident3">Audits</h3>
+          <ul class="horizontal-tabs">
+            <li>Elements</li>
+            <li>Network</li>
+            <li>Sources</li>
+            <li>Timeline</li>
+            <li>Profiles</li>
+            <li>Resources</li>
+            <li class="selected">Audits</li>
+            <li>Console</li>
+          </ul>
+          <ul>
+            <li class="fragment fade-in"><span class="ident3">Overview: </span>Get recommendations on performance.</li>
+            <li class="fragment fade-in"><span class="ident3">Answers: </span>How can I make this app faster!?</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="ident3">Audits</h3>
+          <ul>
+            <li>Performance Audit of best practices</li>
+            <li>Very specific recommendations</li>
+          </ul>
+        </section>
+
+        <section data-transition="zoom">
+          <h3 class="ident4">Console</h3>
+          <ul class="horizontal-tabs">
+            <li>Elements</li>
+            <li>Network</li>
+            <li>Sources</li>
+            <li>Timeline</li>
+            <li>Profiles</li>
+            <li>Resources</li>
+            <li>Audits</li>
+            <li class="selected">Console</li>
+          </ul>
+          <ul>
+            <li class="fragment fade-in"><span class="ident4">Overview: </span>Interactive shell for your application.</li>
+            <li class="fragment fade-in"><span class="ident4">Answers: </span>What function just caused my application throw up!?</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="ident4">Console</h3>
+          <ul>
+            <li>Use it like a repl</li>
+            <li><a href="https://developer.chrome.com/devtools/docs/console-api">https://developer.chrome.com/devtools/docs/console-api</a></li>
+            <li class="fragment fade-in no-list-style"><span class="ident4">Tips:</span>
+              <ul>
+                <li>console.assert(false,"Something is broken");</li>
+                <li>console.log("%cWhy hello there.", "color: blue;");</li>
+                <li>debugger;</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="ident1">Other nice things...</h3>
+          <ul>
+            <li>React DevTools</li>
+            <li>Device Mode</li>
+            <li class="fragment fade-in no-list-style"><span class="ident1">Tips:</span>
+              <ul>
+                <li>CSS Breakpoints</li>
+                <li>Emulation</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Questions?</h2>
+          <br/>
+          <ul>
+            <li><a href="https://github.com/jthoms1/techtalk-2015-september">
+              https://github.com/jthoms1/techtalk-2015-september
+            </a></li>
+            <li><a href="http://discover-devtools.codeschool.com/">
+              http://discover-devtools.codeschool.com/
+            </a></li>
+            <li><a href="https://developers.google.com/web/tools/chrome-devtools/">
+              https://developers.google.com/web/tools/chrome-devtools/
+            </a></li>
+            <li><a href="https://developers.google.com/web/updates/chrome-devtools/">
+              https://developers.google.com/web/updates/chrome-devtools/
+            </a></li>
+            <li><a href="https://medium.com/jotform-form-builder/how-to-use-chrome-devtools-like-a-pro-b9bd414870e3">
+              https://medium.com/jotform-form-builder/how-to-use-chrome-devtools-like-a-pro-b9bd414870e3
+            </a></li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

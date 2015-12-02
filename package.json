@@ -1,0 +1,20 @@
+{
+  "name": "nodeschool-december-2015",
+  "version": "0.0.1",
+  "description": "Project to show nodschool intro.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jthoms1/nodeschool-december-2015.git"
+  },
+  "author": "Josh Thomas (http://github.com/jthoms1)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jthoms1/nodeschool-december-2015/issues"
+  },
+  "homepage": "https://github.com/jthoms1/nodeschool-december-2015",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
