@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
 
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -52,6 +52,7 @@
                position: absolute;
                bottom: 25px;
                left: 25px;
+               width: 150px;
             }
           </style>
     <!-- Printing and PDF exports -->
@@ -88,12 +89,28 @@
   <body>
 
     <div class="reveal">
-      <img class="watermark" src="images/earthling_logo.png" alt="earthling"/>
+      <img class="watermark" src="images/nodeschool-transparent.png" alt="nodeschool"/>
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
-          <h1>NodeSchool Madison <img class="nostyle" alt="chrome devtools" src="images/logo.png" /></h1>
+          <h2><img width="100" class="nostyle" alt="nodeschool madison" src="images/nodeschoolmsn.png" /></br>
+            Welcome to NodeSchool Madison
+          </h2>
+          <ol>
+            <li>Choose a table.</li>
+            <li>Ensure you can access wifi. It is unsecured.</li>
+            <li>Visit <a href="http://nodeschool.io/madison/one">http://nodeschool.io/madison/one</a>.</li>
+            <li>
+              If you are new to JavaScript install <b>javascripting</b><br/>
+              If you are new to Node.js install <b>learnyounode</b></li>
+          </ol>
+
+        </section>
+        <section>
+          <h1>NodeSchool Madison
+            <img width="400" class="nostyle" alt="chrome devtools" src="images/nodeschoolmsn.png" />
+          </h1>
           <p>
             <small>
               Josh Thomas / <a href="http://twitter.com/jthoms1">@jthoms1</a>
@@ -108,261 +125,48 @@
         </section>
 
         <section>
-          <h2>When you don't know your tool what do you have?</h2>
-          <ul>
-            <li class="fragment fade-in">Panels and Problems<br/><br/></li>
-            <li class="fragment fade-in">Insights and Answers</li>
-          </ul>
+          <h2>Sponsors</h2>
+          <img width="300" class="nostyle" alt="nodeschool madison" src="images/earthling_logo.png" />
         </section>
 
-        <section data-transition="zoom">
-          <h3 class="ident1">Elements</h3>
-          <ul class="horizontal-tabs">
-            <li class="selected">Elements</li>
-            <li>Network</li>
-            <li>Sources</li>
-            <li>Timeline</li>
-            <li>Profiles</li>
-            <li>Resources</li>
-            <li>Audits</li>
-            <li>Console</li>
-          </ul>
-          <ul>
-            <li class="fragment fade-in"><span class="ident1">Overview: </span>Inspect/Edit the HTML and CSS of your site.</li>
-            <li class="fragment fade-in"><span class="ident1">Answers: </span>What css is screwing up my layout!?</li>
-          </ul>
-        </section>
         <section>
-          <h3 class="ident1">Elements</h3>
+          <h2>What is NodeSchool?</h2>
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li class="fragment fade-in no-list-style"><span class="ident1">Tips:</span>
-              <ul>
-                <li>Expand all children: <i>alt + click</i></li>
-                <li>Find by selector: <i>cmd + f</i></li>
-                <li>Computed Style: Identify the winning line</li>
-                <li>Apply pseudo selector to element</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-
-        <section data-transition="zoom">
-          <h3 class="ident2">Network</h3>
-          <ul class="horizontal-tabs">
-            <li>Elements</li>
-            <li class="selected">Network</li>
-            <li>Sources</li>
-            <li>Timeline</li>
-            <li>Profiles</li>
-            <li>Resources</li>
-            <li>Audits</li>
-            <li>Console</li>
-          </ul>
-          <ul>
-            <li class="fragment fade-in"><span class="ident2">Overview: </span>Identify network issues and test your site's network performance.</li>
-            <li class="fragment fade-in"><span class="ident2">Answers: </span>Why is my ajax data not loading!?</li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="ident2">Network</h3>
-          <ul>
-            <li>Identify resources downloaded</li>
-            <li>Get a general timeline and speed of the application</li>
-            <li>Troubleshoot web service errors</li>
-            <li class="fragment fade-in no-list-style"><span class="ident2">Tips:</span>
-              <ul>
-                <li>Throttling to simulate slower networks</li>
-                <li>Capture frames of the site during download.</li>
-                <li>Copy image as base 64 Data URI</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-
-        <section data-transition="zoom">
-          <h3 class="ident3">Sources</h3>
-          <ul class="horizontal-tabs">
-            <li>Elements</li>
-            <li>Network</li>
-            <li class="selected">Sources</li>
-            <li>Timeline</li>
-            <li>Profiles</li>
-            <li>Resources</li>
-            <li>Audits</li>
-            <li>Console</li>
-          </ul>
-          <ul>
-            <li class="fragment fade-in"><span class="ident3">Overview: </span>Debug your JavaScript effectively.</li>
-            <li class="fragment fade-in"><span class="ident3">Answers: </span>What is my variable's value at this line!?</li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="ident3">Sources</h3>
-          <ul>
-            <li>Breakpoints are your best friend</li>
-            <li>Stepping your code</li>
-            <li class="fragment fade-in no-list-style"><span class="ident3">Tips:</span>
-              <ul>
-                <li>Prettyify jQuery minified source</li>
-                <li>Pause on Exceptions</li>
-                <li>Find source by name: <i>cmd + o</i></li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-
-        <section data-transition="zoom">
-          <h3 class="ident4">Timeline</h3>
-          <ul class="horizontal-tabs">
-            <li>Elements</li>
-            <li>Network</li>
-            <li>Sources</li>
-            <li class="selected">Timeline</li>
-            <li>Profiles</li>
-            <li>Resources</li>
-            <li>Audits</li>
-            <li>Console</li>
-          </ul>
-          <ul>
-            <li class="fragment fade-in"><span class="ident4">Overview: </span>Gain an overview of your application timeline.</li>
-            <li class="fragment fade-in"><span class="ident4">Answers: </span>Why is my app taking so long to load!?</li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="ident4">Timeline</h3>
-          <ul>
-            <li>Get a general timeline and speed of the application</li>
-            <li>Flame chart</li>
-          </ul>
-        </section>
-
-        <section data-transition="zoom">
-          <h3 class="ident1">Profiles</h3>
-          <ul class="horizontal-tabs">
-            <li>Elements</li>
-            <li>Network</li>
-            <li>Sources</li>
-            <li>Timeline</li>
-            <li class="selected">Profiles</li>
-            <li>Resources</li>
-            <li>Audits</li>
-            <li>Console</li>
-          </ul>
-          <ul>
-            <li class="fragment fade-in"><span class="ident1">Overview: </span>Profile your application CPU and memory use.</li>
-            <li class="fragment fade-in"><span class="ident1">Answers: </span>Where is my memory leak coming from!?</li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="ident1">Profiles</h3>
-          <ul>
-            <li>Record interactions and gain insight</li>
-            <li>Profile CPU</li>
-            <li>Identify Memory Allocation</li>
-            <li>Monitory memory allocation over time</li>
-          </ul>
-        </section>
-
-        <section data-transition="zoom">
-          <h3 class="ident2">Resources</h3>
-          <ul class="horizontal-tabs">
-            <li>Elements</li>
-            <li>Network</li>
-            <li>Sources</li>
-            <li>Timeline</li>
-            <li>Profiles</li>
-            <li class="selected">Resources</li>
-            <li>Audits</li>
-            <li>Console</li>
-          </ul>
-          <ul>
-            <li class="fragment fade-in"><span class="ident2">Overview: </span>Inspect your application's peristent storage.</li>
-            <li class="fragment fade-in"><span class="ident2">Answers: </span>How/Why I am still logged in!?</li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="ident2">Resources</h3>
-          <ul>
-            <li>Identify specific resources outside of network tab</li>
-            <li>View persistent storage mechanisms: ie cookies, local storage</li>
-            <li class="fragment fade-in no-list-style"><span class="ident2">Tips:</span>
-              <ul>
-                <li>Clear cookies</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-
-        <section data-transition="zoom">
-          <h3 class="ident3">Audits</h3>
-          <ul class="horizontal-tabs">
-            <li>Elements</li>
-            <li>Network</li>
-            <li>Sources</li>
-            <li>Timeline</li>
-            <li>Profiles</li>
-            <li>Resources</li>
-            <li class="selected">Audits</li>
-            <li>Console</li>
-          </ul>
-          <ul>
-            <li class="fragment fade-in"><span class="ident3">Overview: </span>Get recommendations on performance.</li>
-            <li class="fragment fade-in"><span class="ident3">Answers: </span>How can I make this app faster!?</li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="ident3">Audits</h3>
-          <ul>
-            <li>Performance Audit of best practices</li>
-            <li>Very specific recommendations</li>
-          </ul>
-        </section>
-
-        <section data-transition="zoom">
-          <h3 class="ident4">Console</h3>
-          <ul class="horizontal-tabs">
-            <li>Elements</li>
-            <li>Network</li>
-            <li>Sources</li>
-            <li>Timeline</li>
-            <li>Profiles</li>
-            <li>Resources</li>
-            <li>Audits</li>
-            <li class="selected">Console</li>
-          </ul>
-          <ul>
-            <li class="fragment fade-in"><span class="ident4">Overview: </span>Interactive shell for your application.</li>
-            <li class="fragment fade-in"><span class="ident4">Answers: </span>What function just caused my application throw up!?</li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="ident4">Console</h3>
-          <ul>
-            <li>Use it like a repl</li>
-            <li><a href="https://developer.chrome.com/devtools/docs/console-api">https://developer.chrome.com/devtools/docs/console-api</a></li>
-            <li class="fragment fade-in no-list-style"><span class="ident4">Tips:</span>
-              <ul>
-                <li>console.assert(false,"Something is broken");</li>
-                <li>console.log("%cWhy hello there.", "color: blue;");</li>
-                <li>debugger;</li>
-              </ul>
-            </li>
+            <li class="fragment fade-in">Community driven/Open Source<br/><br/></li>
+            <li class="fragment fade-in">Hands on workshops<br/><br/></li>
+            <li class="fragment fade-in">Local chapters</li>
           </ul>
         </section>
 
         <section>
-          <h3 class="ident1">Other nice things...</h3>
+          <h2>What is Node.js?</h2>
           <ul>
-            <li>React DevTools</li>
-            <li>Device Mode</li>
-            <li class="fragment fade-in no-list-style"><span class="ident1">Tips:</span>
-              <ul>
-                <li>CSS Breakpoints</li>
-                <li>Emulation</li>
-              </ul>
-            </li>
+            <li class="fragment fade-in">Server-side JavaScript<br/><br/></li>
+            <li class="fragment fade-in">Cross-platform runtime<br/><br/></li>
+            <li class="fragment fade-in">NPM</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>The Approach</h2>
+          <ul>
+            <li class="fragment fade-in">Self guided learning<br/><br/></li>
+            <li class="fragment fade-in">Mentors<br/><br/></li>
+            <li class="fragment fade-in">Workshoppers</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What is a Workshopper?</h2>
+          <img width="600" class="nostyle fragment fade-in" alt="learnyounode" src="images/learnyounode.png" />
+        </section>
+
+        <section>
+          <h2>Today's Sessions</h2>
+          <ul>
+            <li><a href="http://nodeschool.io/madison/one">http://nodeschool.io/madison/one</a>.<br/><br/></li>
+            <li>javascripting<br/><br/></li>
+            <li>learnyounode</li>
           </ul>
         </section>
 
@@ -370,20 +174,14 @@
           <h2>Questions?</h2>
           <br/>
           <ul>
-            <li><a href="https://github.com/jthoms1/techtalk-2015-september">
-              https://github.com/jthoms1/techtalk-2015-september
-            </a></li>
-            <li><a href="http://discover-devtools.codeschool.com/">
-              http://discover-devtools.codeschool.com/
-            </a></li>
-            <li><a href="https://developers.google.com/web/tools/chrome-devtools/">
-              https://developers.google.com/web/tools/chrome-devtools/
-            </a></li>
-            <li><a href="https://developers.google.com/web/updates/chrome-devtools/">
-              https://developers.google.com/web/updates/chrome-devtools/
-            </a></li>
-            <li><a href="https://medium.com/jotform-form-builder/how-to-use-chrome-devtools-like-a-pro-b9bd414870e3">
-              https://medium.com/jotform-form-builder/how-to-use-chrome-devtools-like-a-pro-b9bd414870e3
+            <li>Code of Conduct:<br/><a href="http://nodeschool.io/madison">
+              http://nodeschool.io/madison/#code-of-conduct
+            </a><br/><br/></li>
+            <li>Nodeschool Madison Website:<br/><a href="http://nodeschool.io/madison">
+              http://nodeschool.io/madison
+            </a><br/><br/></li>
+            <li>Session One:<br/><a href="http://nodeschool.io/madison/one">
+              http://nodeschool.io/madison/one
             </a></li>
           </ul>
         </section>
